@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game Eduardo</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Matching Game Eduardo</h1>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">0</span> Moves
+
+            <!-- Show the timer for each session -->
+            <div class="timer">
+            </div>
+            <div class="restart" onclick=startPlay()>
+                <i class="fa fa-repeat"></i>
+            </div>
+
+
+        </section>
+
+        <ul class="deck" id="card-board">
+            <li class="card" type="diamond" id="c1">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card" type="planeo" id="c2">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card match" type="anchor" id="c3">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="bolt" id="c4">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="cube" id="c5">
+                <i class="fa fa-cube"></i>
+            </li>
+            <li class="card match" type="anchor" id="c6">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="leaf" id="c7">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bicycle" id="c8">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="diamond" id="c9">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card" type="bomb" id="c10">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card" type="leaf" id="c11">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bomb" id="c12">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card open show" type="bolt" id="c13">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="bicycle" id="c14">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="planeo" id="c15">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card" type="cube" id="c16">
+                <i class="fa fa-cube"></i>
+            </li>
+        </ul>
+
+        <div id="popupCongratulations" class="popover">
+            <div class="popup">
+                <h2>Completed!</h2>
+                <a class="close" href=# >×</a>
+                
+                <div class="content-popup">
+                    <p>Number of moves: <span id=finalMove> </span></p>
+                    <p>Time: <span id=totalTime> </span> </p>
+                    <p>Number of Stars:  <span id=starRating></span></p>
+                </div>
+                <button id="play-again"onclick="startAgain()">
+                    Do you want to play again? Click here!</a>
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
